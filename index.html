@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de OS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Consulta de OS</h1>
+    <label for="osNumber">Número da OS:</label>
+    <input type="text" id="osNumber" name="osNumber">
+    <button onclick="buscarOS()">Buscar</button>
+
+    <div id="osInfo" class="hidden">
+        <h2>Informações da OS</h2>
+        <table>
+            <tr>
+                <th>Submission Date</th>
+                <th>Data de Abertura</th>
+                <th>Centro de Trabalho</th>
+                <th>Tipo de Manutenção</th>
+                <th>Descrição do Serviço</th>
+                <th>Informações Complementares</th>
+                <th>Número da Solicitação</th>
+                <th>Anexar uma Imagem</th>
+                <th>Solicitante</th>
+                <th>Setor</th>
+                <th>Local de Instalação/Equipamento - Avaré</th>
+                <th>Local de Instalação/Equipamento - Holambra</th>
+                <th>Local de Instalação/Equipamento - Itaberá II</th>
+                <th>Local de Instalação/Equipamento - São Manuel</th>
+                <th>Local de Instalação/Equipamento - Takaoka</th>
+                <th>Local de Instalação/Equipamento - Taquari</th>
+                <th>Local de Instalação/Equipamento - Taquarituba</th>
+                <th>Local de Instalação/Equipamento - Taquarivaí</th>
+            </tr>
+            <tr>
+                <td id="submissionDate"></td>
+                <td id="dataAbertura"></td>
+                <td id="centroTrabalho"></td>
+                <td id="tipoManutencao"></td>
+                <td id="descricaoServico"></td>
+                <td id="informacoesComplementares"></td>
+                <td id="numeroSolicitacao"></td>
+                <td id="anexarImagem"></td>
+                <td id="solicitante"></td>
+                <td id="setor"></td>
+                <td id="localAvare"></td>
+                <td id="localHolambra"></td>
+                <td id="localItaberaII"></td>
+                <td id="localSaoManuel"></td>
+                <td id="localTakaoka"></td>
+                <td id="localTaquari"></td>
+                <td id="localTaquarituba"></td>
+                <td id="localTaquarivai"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Biblioteca SheetJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
